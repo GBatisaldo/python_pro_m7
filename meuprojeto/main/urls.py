@@ -1,7 +1,8 @@
-from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
+from . import views
+
+app_main = "main"
 
 urlpatterns = [
-    path('', include('main.urls')), #main é o nome do diretório criado no comando startapp
-    path('admin/', admin.site.urls),
+    path("", views.homepage, name="homepage"),
 ]
